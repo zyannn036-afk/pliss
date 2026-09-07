@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Untuk Kamu 🐶</title>
+
+    <link rel="stylesheet" href="confes.css" />
+  </head>
+
+  <body>
+    <div class="dog-page">
+      <!-- Tulisan -->
+      <div class="dog-text">
+        <h1>Coba sentuh anjingnya 🐶</h1>
+        <p>Mungkin dia akan suka...</p>
+      </div>
+
+      <!-- ANJING -->
+      <img
+        src="image/doggy.png"
+        class="dog"
+        id="dog"
+        onclick="showEnvelope()"
+      />
+
+      <!-- AMPLOP -->
+      <div class="envelope" id="envelope" onclick="openLetter()">💌</div>
+
+      <!-- POPUP PESAN -->
+      <div class="letter-popup" id="letterPopup">
+        <div class="letter-box">
+          <div class="heart">❤️</div>
+
+          <h2>Untuk Kamu</h2>
+
+          <p>
+            Sebenarnya ada sesuatu yang mau aku bilang ke kamu ...
+            <br /><br />
+            Aku cinta kamu van (anjay). deym aku ngerasainnya pas kapan yaa...
+            tapi jujur itu menurutku indah, yap yap mengagumi mu yang seindah
+            itu memang luar biasa, dan jujur waktu inagurasi aku seneng banget,
+            yap aku berharap kita bisa menjadi pasangan, tapi itu terlalu cepat.
+            dan setelah itu aku membuat web ini.
+
+            <br /><br />
+            Terima kasih udah sampai sejauh ini dan mau membuka semua halaman
+            kecil ini.
+          </p>
+
+          <button onclick="nextPage()">LANJUT</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showEnvelope() {
+        document.getElementById("envelope").classList.add("show");
+      }
+
+      function openLetter() {
+        document.getElementById("letterPopup").classList.add("show");
+      }
+
+      function nextPage() {
+        window.location.href = "bagian4.html ";
+      }
+    </script>
+  </body>
+</html>

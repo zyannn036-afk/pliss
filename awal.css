@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  font-family: Arial, sans-serif;
+}
+
+/* HALAMAN AWAL */
+
+.welcome-page {
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("bg1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+/* ISI TENGAH */
+
+.welcome-content {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+
+/* JUDUL */
+
+.welcome-content h1 {
+  color: white;
+
+  font-size: 68px;
+  font-weight: 900;
+
+  white-space: nowrap;
+
+  margin-bottom: 25px;
+}
+
+/* TOMBOL */
+
+.start-button {
+  display: inline-block;
+
+  padding: 20px 30px;
+
+  background-color: #ffed32;
+  color: #735000;
+
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  border-radius: 18px;
+
+  transition: 0.2s ease;
+}
+
+/* EFEK SAAT MOUSE DIARAHKAN */
+
+.start-button:hover {
+  transform: scale(1.05);
+
+  background-color: #fff04a;
+}
+
+/* SAAT DITEKAN */
+
+.start-button:active {
+  transform: scale(0.97);
+}
+/* =========================
+   SEMANGGI BERJATUHAN
+========================= */
+
+.falling-flowers {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+/* SEMANGGI */
+
+.falling-flowers span {
+  position: absolute;
+
+  top: -80px;
+
+  font-size: 35px;
+
+  animation: fall linear infinite;
+
+  opacity: 0.9;
+}
+
+/* ANIMASI JATUH */
+
+@keyframes fall {
+  0% {
+    transform: translateY(-80px) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: translateY(115vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* POSISI DAN KECEPATAN MASING-MASING */
+
+.falling-flowers span:nth-child(1) {
+  left: 5%;
+  font-size: 25px;
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+
+.falling-flowers span:nth-child(2) {
+  left: 12%;
+  font-size: 40px;
+  animation-duration: 12s;
+  animation-delay: 2s;
+}
+
+.falling-flowers span:nth-child(3) {
+  left: 20%;
+  font-size: 28px;
+  animation-duration: 9s;
+  animation-delay: 4s;
+}
+
+.falling-flowers span:nth-child(4) {
+  left: 28%;
+  font-size: 35px;
+  animation-duration: 11s;
+  animation-delay: 1s;
+}
+
+.falling-flowers span:nth-child(5) {
+  left: 35%;
+  font-size: 22px;
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+
+.falling-flowers span:nth-child(6) {
+  left: 42%;
+  font-size: 38px;
+  animation-duration: 13s;
+  animation-delay: 5s;
+}
+
+.falling-flowers span:nth-child(7) {
+  left: 50%;
+  font-size: 25px;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+
+.falling-flowers span:nth-child(8) {
+  left: 58%;
+  font-size: 42px;
+  animation-duration: 12s;
+  animation-delay: 6s;
+}
+
+.falling-flowers span:nth-child(9) {
+  left: 65%;
+  font-size: 30px;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+
+.falling-flowers span:nth-child(10) {
+  left: 72%;
+  font-size: 24px;
+  animation-duration: 8s;
+  animation-delay: 4s;
+}
+
+.falling-flowers span:nth-child(11) {
+  left: 80%;
+  font-size: 40px;
+  animation-duration: 13s;
+  animation-delay: 3s;
+}
+
+.falling-flowers span:nth-child(12) {
+  left: 87%;
+  font-size: 28px;
+  animation-duration: 9s;
+  animation-delay: 5s;
+}
+
+.falling-flowers span:nth-child(13) {
+  left: 93%;
+  font-size: 35px;
+  animation-duration: 11s;
+  animation-delay: 2s;
+}
+
+.falling-flowers span:nth-child(14) {
+  left: 15%;
+  font-size: 22px;
+  animation-duration: 10s;
+  animation-delay: 7s;
+}
+
+.falling-flowers span:nth-child(15) {
+  left: 75%;
+  font-size: 32px;
+  animation-duration: 9s;
+  animation-delay: 8s;
+}

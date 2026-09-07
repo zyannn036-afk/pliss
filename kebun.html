@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kebun Bunga</title>
+    <link rel="stylesheet" href="kebun.css" />
+  </head>
+
+  <body>
+    <div class="garden-page">
+      <!-- ANIMASI BUNGA -->
+      <div class="falling-flowers">
+        <span>🌸</span>
+        <span>🌷</span>
+        <span>🌻</span>
+        <span>🌼</span>
+        <span>🌹</span>
+        <span>🌸</span>
+        <span>🌺</span>
+        <span>🌷</span>
+        <span>🌻</span>
+        <span>🌼</span>
+        <span>🌸</span>
+        <span>🌹</span>
+      </div>
+      <div class="garden-content">
+        <h1>SEKARANG KITA DI KEBUN BUNGA</h1>
+        <h2>pilih bunga favorit kamu</h2>
+      </div>
+
+      <div class="flowers">
+        <button class="flower" onclick="wrongFlower()">🌹</button>
+
+        <button class="flower" onclick="wrongFlower()">🌷</button>
+
+        <!-- BUNGA MATAHARI -->
+        <button class="flower sunflower" onclick="correctFlower()">🌻</button>
+
+        <button class="flower" onclick="wrongFlower()">🌸</button>
+
+        <button class="flower" onclick="wrongFlower()">🌺</button>
+      </div>
+
+      <!-- POPUP -->
+      <div class="popup-overlay" id="popup">
+        <div class="popup-box">
+          <div class="popup-icon" id="popupIcon">🌸</div>
+
+          <h3 id="popupTitle">Ehh...</h3>
+
+          <p id="popupText">Kayaknya bukan bunga favorit kamu deh 😭</p>
+
+          <button class="popup-button" id="popupButton" onclick="closePopup()">
+            COBA LAGI
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function wrongFlower() {
+        document.getElementById("popupIcon").innerHTML = "🌸";
+
+        document.getElementById("popupTitle").innerHTML = "Ah yang bener ";
+
+        document.getElementById("popupText").innerHTML =
+          "Kayaknya bukan bunga favorit kamu deh...";
+
+        document.getElementById("popupButton").innerHTML = "COBA LAGI";
+
+        document.getElementById("popupButton").onclick = closePopup;
+
+        document.getElementById("popup").classList.add("show");
+      }
+
+      function correctFlower() {
+        document.getElementById("popupIcon").innerHTML = "🌻";
+
+        document.getElementById("popupTitle").innerHTML =
+          "Akhirnya kamu jujur 🌻";
+
+        document.getElementById("popupText").innerHTML =
+          "Akhirnya kamu jujur tentang bunga favorit kamu.";
+
+        document.getElementById("popupButton").innerHTML =
+          "PENCET INI UNTUK LANJUT";
+
+        document.getElementById("popupButton").onclick = function () {
+          window.location.href = "confes.html";
+        };
+
+        document.getElementById("popup").classList.add("show");
+      }
+
+      function closePopup() {
+        document.getElementById("popup").classList.remove("show");
+      }
+    </script>
+  </body>
+</html>

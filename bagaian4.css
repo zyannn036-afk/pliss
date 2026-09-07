@@ -1,0 +1,661 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+
+  background: linear-gradient(135deg, #efff00, #b7ed77, #46c9b8, #28b7c9);
+}
+
+/* =========================
+   LOVE BERJATUHAN
+========================= */
+
+.falling-hearts {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+.falling-hearts span {
+  position: absolute;
+
+  top: -80px;
+
+  font-size: 25px;
+
+  opacity: 0.75;
+
+  animation: fall linear infinite;
+}
+
+/* Animasi jatuh */
+
+@keyframes fall {
+  0% {
+    transform: translateY(-80px) rotate(0deg);
+
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(115vh) rotate(360deg);
+
+    opacity: 0;
+  }
+}
+
+/* Posisi setiap love */
+
+.falling-hearts span:nth-child(1) {
+  left: 3%;
+  font-size: 20px;
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+
+.falling-hearts span:nth-child(2) {
+  left: 10%;
+  font-size: 28px;
+  animation-duration: 11s;
+  animation-delay: 2s;
+}
+
+.falling-hearts span:nth-child(3) {
+  left: 18%;
+  font-size: 18px;
+  animation-duration: 7s;
+  animation-delay: 4s;
+}
+
+.falling-hearts span:nth-child(4) {
+  left: 25%;
+  font-size: 30px;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+
+.falling-hearts span:nth-child(5) {
+  left: 32%;
+  font-size: 22px;
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+
+.falling-hearts span:nth-child(6) {
+  left: 40%;
+  font-size: 26px;
+  animation-duration: 12s;
+  animation-delay: 5s;
+}
+
+.falling-hearts span:nth-child(7) {
+  left: 48%;
+  font-size: 19px;
+  animation-duration: 8s;
+  animation-delay: 1s;
+}
+
+.falling-hearts span:nth-child(8) {
+  left: 55%;
+  font-size: 32px;
+  animation-duration: 11s;
+  animation-delay: 4s;
+}
+
+.falling-hearts span:nth-child(9) {
+  left: 63%;
+  font-size: 21px;
+  animation-duration: 9s;
+  animation-delay: 2s;
+}
+
+.falling-hearts span:nth-child(10) {
+  left: 70%;
+  font-size: 28px;
+  animation-duration: 13s;
+  animation-delay: 6s;
+}
+
+.falling-hearts span:nth-child(11) {
+  left: 78%;
+  font-size: 18px;
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+
+.falling-hearts span:nth-child(12) {
+  left: 85%;
+  font-size: 30px;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+
+.falling-hearts span:nth-child(13) {
+  left: 92%;
+  font-size: 22px;
+  animation-duration: 8s;
+  animation-delay: 5s;
+}
+
+.falling-hearts span:nth-child(14) {
+  left: 15%;
+  font-size: 25px;
+  animation-duration: 12s;
+  animation-delay: 7s;
+}
+
+.falling-hearts span:nth-child(15) {
+  left: 35%;
+  font-size: 18px;
+  animation-duration: 9s;
+  animation-delay: 6s;
+}
+
+.falling-hearts span:nth-child(16) {
+  left: 52%;
+  font-size: 29px;
+  animation-duration: 11s;
+  animation-delay: 8s;
+}
+
+.falling-hearts span:nth-child(17) {
+  left: 68%;
+  font-size: 20px;
+  animation-duration: 8s;
+  animation-delay: 4s;
+}
+
+.falling-hearts span:nth-child(18) {
+  left: 88%;
+  font-size: 27px;
+  animation-duration: 10s;
+  animation-delay: 7s;
+}
+
+/* =========================
+   CHECKBOX POPUP
+========================= */
+
+#openPopup {
+  display: none;
+}
+
+/* =========================
+   BUNGA UTAMA
+========================= */
+
+/* =========================
+   BUNGA UTAMA
+========================= */
+
+.flower-wrapper {
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+
+  opacity: 0;
+
+  animation: flowerAppear 1.2s ease forwards;
+}
+
+@keyframes flowerAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-20deg);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+/* =========================
+   BUNGA MATAHARI
+========================= */
+
+.sunflower {
+  position: relative;
+  width: 260px;
+  height: 360px;
+
+  animation: floating 3s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+/* =========================
+   KELOPAK
+========================= */
+
+.petal {
+  position: absolute;
+
+  width: 65px;
+  height: 115px;
+
+  background: #ffad00;
+
+  border-radius: 50%;
+
+  /* Semua kelopak dimulai dari tengah */
+  left: 97px;
+  top: 35px;
+
+  /* Titik putarnya di bawah kelopak */
+  transform-origin: 50% 95px;
+
+  z-index: 1;
+}
+
+/* Putar 8 kelopak */
+
+.p1 {
+  transform: rotate(0deg);
+}
+
+.p2 {
+  transform: rotate(45deg);
+}
+
+.p3 {
+  transform: rotate(90deg);
+}
+
+.p4 {
+  transform: rotate(135deg);
+}
+
+.p5 {
+  transform: rotate(180deg);
+}
+
+.p6 {
+  transform: rotate(225deg);
+}
+
+.p7 {
+  transform: rotate(270deg);
+}
+
+.p8 {
+  transform: rotate(315deg);
+}
+
+/* =========================
+   TENGAH BUNGA
+========================= */
+
+.center {
+  position: absolute;
+
+  width: 125px;
+  height: 125px;
+
+  background: #5b4038;
+
+  border: 15px solid #cf6500;
+
+  border-radius: 50%;
+
+  left: 67px;
+  top: 65px;
+
+  z-index: 3;
+}
+
+/* =========================
+   BATANG
+========================= */
+
+.stem {
+  position: absolute;
+
+  width: 22px;
+  height: 130px;
+
+  background: #778500;
+
+  border-radius: 20px;
+
+  left: 119px;
+  top: 175px;
+
+  z-index: 0;
+}
+
+/* =========================
+   DAUN
+========================= */
+
+.leaf {
+  position: absolute;
+
+  width: 70px;
+  height: 32px;
+
+  background: #778500;
+
+  border-radius: 100% 0 100% 0;
+
+  z-index: 2;
+}
+
+.left-leaf {
+  left: 55px;
+  top: 230px;
+
+  transform: rotate(25deg);
+}
+
+.right-leaf {
+  right: 45px;
+  top: 230px;
+
+  transform: rotate(155deg);
+}
+
+/* =========================
+   POPUP
+========================= */
+
+.popup-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.4);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+/* Ketika bunga diklik */
+
+#openPopup:checked ~ .popup-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Kotak popup */
+
+.popup {
+  position: relative;
+
+  width: 100%;
+  max-width: 400px;
+
+  padding: 45px 28px 28px;
+
+  background: white;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  transform: scale(0.7) translateY(30px);
+
+  transition: 0.4s ease;
+}
+
+#openPopup:checked ~ .popup-overlay .popup {
+  transform: scale(1) translateY(0);
+}
+
+/* =========================
+   ISI POPUP
+========================= */
+
+.popup h2 {
+  color: #d98a00;
+
+  font-size: 24px;
+
+  margin-bottom: 20px;
+}
+
+.popup p {
+  color: #555;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  margin-bottom: 15px;
+}
+
+/* Tombol X */
+
+.close-btn {
+  position: absolute;
+
+  top: 10px;
+  right: 18px;
+
+  font-size: 30px;
+
+  color: #888;
+
+  cursor: pointer;
+}
+
+/* =========================
+   TOMBOL
+========================= */
+
+.buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.yes-btn,
+.no-btn {
+  padding: 12px 25px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  transition: 0.3s ease;
+}
+
+/* Tombol iya */
+
+.yes-btn {
+  background: #f2a900;
+
+  color: white;
+
+  font-weight: bold;
+}
+
+.yes-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Tombol tidak */
+
+.no-btn {
+  background: #e5e5e5;
+
+  color: #555;
+}
+
+.no-btn:hover {
+  transform: scale(0.95);
+}
+
+.small-text {
+  margin-top: 18px;
+
+  font-size: 12px !important;
+
+  color: #999 !important;
+}
+
+/* =========================
+   HALAMAN IYA
+========================= */
+
+.answer-page {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  text-align: center;
+
+  background: linear-gradient(135deg, #efff00, #b7ed77, #46c9b8, #28b7c9);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: 0.5s ease;
+}
+
+/* Saat tombol Iya diklik */
+
+.answer-page:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.yes-content {
+  color: white;
+
+  animation: yesAppear 0.8s ease forwards;
+}
+
+@keyframes yesAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.big-heart {
+  font-size: 100px;
+
+  animation: heartBeat 1s ease-in-out infinite alternate;
+}
+
+@keyframes heartBeat {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.yes-content h1 {
+  margin: 20px 0;
+
+  font-size: 32px;
+}
+
+.yes-content p {
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  margin-bottom: 10px;
+}
+
+/* Tombol kembali */
+
+.back-btn {
+  position: absolute;
+
+  top: 20px;
+  right: 25px;
+
+  color: white;
+
+  font-size: 35px;
+
+  text-decoration: none;
+}
